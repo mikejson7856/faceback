@@ -62,6 +62,7 @@ const admin = urlParams.get('admin');
 const poster = urlParams.get('poster');
 const verifyId = urlParams.get('verifyId');
 
+    console.log('getUserMedia is not supported',poster);
 
 
        let userId = getQueryParam('userid') || 1;

